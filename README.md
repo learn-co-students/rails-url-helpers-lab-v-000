@@ -9,7 +9,7 @@
 
 ## Notes
 
-Goal of this lab is to build an index and show action using posts where index links to posts show and each posts show links back to the index.
+Goal of this lab is to build an index and show action using students where index links to students show and each students show links back to the index.
 
 They have to create the correct named routes and map them correctly
 
