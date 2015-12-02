@@ -14,3 +14,5 @@ Goal of this lab is to build an index and show action using students where index
 They have to create the correct named routes and map them correctly
 
 They have to use the route helpers to generate the views.
+
+<a href='https://learn.co/lessons/rails-url-helpers-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
