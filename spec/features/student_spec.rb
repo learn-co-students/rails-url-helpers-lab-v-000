@@ -42,6 +42,6 @@ describe 'linking from the index page to the show page' do
   it 'index page links to post page' do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
     visit students_path
-    expect(page).to have_link(@student.full_name, href: student_path(@student))
+    expect(page).to have_link(@student.to_s, href: student_path(@student))
   end
 end
