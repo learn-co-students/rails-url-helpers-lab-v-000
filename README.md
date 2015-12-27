@@ -19,10 +19,12 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * A user should be able to click the user's name on the `index` page and be taken to that specific user's `show` page
 
+* Students now have a new boolean attribute called `active`
+
+* A user should be able to go to `/student/:id/activate` and their `active` attribute toggled to `true` or `false`
+
 
 ## Keep in mind
-
-* Update the `config/routes.rb` file and utilize the `:as` call for the `show` route to create the `student_path(:id)` helper method.
 
 * Make sure sure the show path is `/student/:id` where the `:id` is a route variable
 
