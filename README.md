@@ -4,7 +4,7 @@
 
 1. Generate URLs using route helpers
 
-2. Draw routes with implicit and explicit names using ```:as```
+2. Draw routes with implicit and explicit names using `:as`
 
 3. Draw routes with variables
 
@@ -22,13 +22,13 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 ## Keep in mind
 
-* Update the ```config/routes.rb``` file and utilize the ```:as``` call for the ```show``` route to create the ```student_path(:id)``` helper method.
+* Update the `config/routes.rb` file and utilize the `:as` call for the `show` route to create the `student_path(:id)` helper method.
 
-* Make sure sure the show path is ```/student/:id``` where the ```:id``` is a route variable
+* Make sure sure the show path is `/student/:id` where the `:id` is a route variable
 
-* Call our Student class instance method ```to_s``` on each of students on the index page so that each student element contains their first and last name.
+* Call our Student class instance method `to_s` on each of students on the index page so that each student element contains their first and last name.
 
-* On the student index page, test out all three different link_to argument options, e.g.: ```link_to "post", "/post/#{post.id}"```, ```link_to "post", post_path(post.id)```, ```link_to "post", post_path(post)```.
+* On the student index page, test out all three different link_to argument options, e.g.: `link_to "post", "/post/#{post.id}"`, `link_to "post", post_path(post.id)`, `link_to "post", post_path(post)`.
 
 
 ## Resources
