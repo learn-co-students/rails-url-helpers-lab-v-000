@@ -12,6 +12,7 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     @student.toggle :active
     @student.save
+    binding.pry
     redirect_to student_path
   end
 
