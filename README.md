@@ -38,3 +38,5 @@ In this lab you will be building out the Student management dashboard for the Fl
 * [Reading](https://github.com/learn-co-curriculum/rails-url-helpers-readme)
 
 * [URL Helper Documentation](http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html)
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-url-helpers-lab' title='Rails URL Helpers Lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
