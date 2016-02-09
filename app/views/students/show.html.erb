@@ -1,1 +1,6 @@
-<h1><%= @student.to_s %></h1>
+<%= @student.to_s %>
+<h1><%= @student.first_name %></h1>
+<h1><%= @student.last_name %></h1>
+
+<%= @student.active ? "This student is currently active." : "This student is currently inactive." %>
+
