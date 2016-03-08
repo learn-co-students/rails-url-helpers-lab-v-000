@@ -9,6 +9,13 @@ class StudentsController < ApplicationController
     #@student = Student.find(params[:id])
   end
 
+  def activate
+    student = Student.find(params[:id])
+    @active = student.active ^= true #toggles the boolean value
+    redirect_to action: "show", id: student.id
+
+  end
+
   private
 
     def set_student
