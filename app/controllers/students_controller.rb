@@ -1,3 +1,4 @@
+require 'pry'
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
   
@@ -6,6 +7,10 @@ class StudentsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+    @student = set_student
   end
 
   private
