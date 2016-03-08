@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
   def activate
     student = Student.find(params[:id])
     @active = student.active ^= true #toggles the boolean value. doesn't seem to work
-    render action: "show", id: student.id
+    redirect_to action: "show", id: student.id
   end
 
   private
