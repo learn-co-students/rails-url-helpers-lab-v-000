@@ -26,7 +26,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 ## Keep in mind
 
-* Make sure sure the show path is `/student/:id` where the `:id` is a route variable
+* Make sure the show path is `/student/:id` where the `:id` is a route variable
 
 * Call our Student class instance method `to_s` on each of students on the index page so that each student element contains their first and last name.
 
@@ -40,3 +40,5 @@ In this lab you will be building out the Student management dashboard for the Fl
 * [URL Helper Documentation](http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-url-helpers-lab' title='Rails URL Helpers Lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-url-helpers-lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
