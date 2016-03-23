@@ -7,4 +7,10 @@ Rails.application.routes.draw do
   # how you can pass params through the
   # route, we'll keep it explicit and refactor it later
   get "students/:id", to: "students#show"
+  get "students/:id/activate", to: "students#show" do
+    @student = Student.find(params[:id])
+    @student.active ^= true #XOR with true
+    @student.save
+  end
+
 end
