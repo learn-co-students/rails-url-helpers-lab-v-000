@@ -25,11 +25,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
+
   gem 'spring'
   gem 'rspec-rails', '~> 3.0.0'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'tzinfo-data', platform: [:mingw, :mswin, :x64_mingw]
+  gem 'pry'
 end
+
+group :development do
+  gem 'web-console', '~> 2.0'
+end
+
 
