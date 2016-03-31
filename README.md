@@ -17,7 +17,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * A user should be able to navigate to `/students` to view all of the students
 
-* A user should be able to click the user's name on the `index` page and be taken to that specific user's `show` page
+* A user should be able to click the student's name on the `index` page and be taken to that specific student's `show` page
 
 * Students now have a new boolean attribute called `active` (HINT: You might have to search around for the best way to set a (*ahem*) _default value_.)
 
