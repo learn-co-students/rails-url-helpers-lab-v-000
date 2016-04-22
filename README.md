@@ -30,7 +30,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * Call our Student class instance method `to_s` on each of students on the index page so that each student element contains their first and last name.
 
-* On the student index page, test out all three different link_to argument options, e.g.: `link_to "post", "/post/#{post.id}"`, `link_to "post", post_path(post.id)`, `link_to "post", post_path(post)`.
+* On the student index page, test out all three different link_to argument options, e.g.: `link_to "post", "/post/#{post.id}"`, `link_to("post", post_path(post.id))`, `link_to("post", post_path(post))`.
 
 
 ## Resources
