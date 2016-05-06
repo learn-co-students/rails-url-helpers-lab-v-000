@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # how you can pass params through the
   # route, we'll keep it explicit and refactor it later
   get "students/:id", to: "students#show"
+  
 end
