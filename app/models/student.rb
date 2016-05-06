@@ -5,12 +5,7 @@ class Student < ActiveRecord::Base
   end
 
   def activate_student
-    if self.active
-      self.active = true
-    else
-      self.active = false
-    end
-    #self.active ? self.active = true : self.active = false
+    self.active ? self.active = false : self.active = true
     self.save
   end
 

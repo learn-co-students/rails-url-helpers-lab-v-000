@@ -10,12 +10,12 @@ class StudentsController < ApplicationController
 
   def activate
     @student.activate_student
-    render :show
+    redirect_to student_path(@student)
   end
 
   private
 
     def set_student
-      @student = Student.find(params[:id])
+      @student = Student.find_by_id(params[:id])
     end
 end
