@@ -1,5 +1,39 @@
 <div>
+<h3>Old Way</h3>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+  <div><a href="/students/<%= "#{student.id}" %>"><%= "#{student}" %></a></div>
+  <% end %>
+</div>
+
+<!-- 1 link_to "post", "/post/#{post.id}",  -->
+<!-- 2 link_to("post", post_path(post.id)),  -->
+<!-- 3 link_to("post", post_path(post)). -->
+
+<h3>(1) Rails Way</h3>
+<div>
+  <% @students.each do |student| %>
+  <div><%= link_to student, "/students/#{student.id}" %></a></div>
+  <% end %>
+</div>
+
+<!-- 1 link_to "post", "/post/#{post.id}",  -->
+<!-- 2 link_to("post", post_path(post.id)),  -->
+<!-- 3 link_to("post", post_path(post)). -->
+
+<h3>(2) Rails Way: 1st refactor</h3>
+<div>
+  <% @students.each do |student| %>
+  <div><%= link_to student, student_path(student.id) %></a></div>
+  <% end %>
+</div>
+
+<!-- 1 link_to "post", "/post/#{post.id}",  -->
+<!-- 2 link_to("post", post_path(post.id)),  -->
+<!-- 3 link_to("post", post_path(post)). -->
+
+<h3>(3) Rails Way: 2nd refactor</h3>
+<div>
+  <% @students.each do |student| %>
+  <div><%= link_to(student, student_path(student)) %></a></div>
   <% end %>
 </div>
