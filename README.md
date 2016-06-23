@@ -19,9 +19,11 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * A user should be able to click the student's name on the `index` page and be taken to that specific student's `show` page
 
-* Students now have a new boolean attribute called `active` (HINT: You might have to search around for the best way to set a (*ahem*) _default value_.)
+* Create a new boolean attribute called `active` in the students table. (HINT: You might have to search around for the best way to set a (*ahem*) _default value_.)
 
 * A user should be able to go to `/student/:id/activate` and their `active` attribute toggled to `true` or `false`
+
+* Read the failing tests and modify the code until they pass. 
 
 
 ## Keep in mind
@@ -42,3 +44,5 @@ In this lab you will be building out the Student management dashboard for the Fl
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-url-helpers-lab' title='Rails URL Helpers Lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-url-helpers-lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/rails-url-helpers-lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
