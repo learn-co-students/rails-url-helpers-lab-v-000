@@ -7,6 +7,12 @@ class StudentsController < ApplicationController
 
   def show
   end
+  
+  def activate
+    set_student
+    @student.toggle_active_status
+    redirect_to student_path(@student)
+  end
 
   private
 
