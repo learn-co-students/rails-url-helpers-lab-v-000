@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   # However for the sake of this lab and seeing
   # how you can pass params through the
   # route, we'll keep it explicit and refactor it later
+  get 'student/:id/activate', to: 'students#activate', as: 'activate_student'
   get "students/:id", to: "students#show"
+  get 'student/:id', to: 'students#show', as: 'student'
 end
