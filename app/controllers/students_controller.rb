@@ -6,6 +6,16 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @inactive = "This student is currently inactive."
+    @active = "This student is currently active."
+  end
+
+  def activate
+
+    @student = set_student
+    @student.active = !@student.active
+    @student.save
+    redirect_to student_path(@student)
   end
 
   private
