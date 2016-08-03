@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
     else
       Student.update(params[:id], active: true)
     end
-    redirect_to "/students/#{set_student.id}"
+    redirect_to student_path(set_student)
   end
 
   private
