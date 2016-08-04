@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # get "students/:id", to: "students#show"
 
   resources :students
+
+  get '/:id/activate', to: 'students#activate', as: 'activate_student'
 end
