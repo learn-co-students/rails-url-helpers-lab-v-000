@@ -8,6 +8,13 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def activate
+    s = Student.find_by(id: params[:id])
+    s.active = !s.active
+    s.save
+    redirect_to student_path(s)
+  end
+
   private
 
     def set_student
