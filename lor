@@ -1,0 +1,85 @@
+[32m.[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m
+
+Failures:
+
+  1) Show page renders properly
+     [31mFailure/Error: visit student_path(@student)[0m
+     [31mActionView::Template::Error:[0m
+     [31m  undefined method `active' for #<Student:0x0000000654e970>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__840313926834679382_53110560'[0m
+     [36m# ./spec/features/student_spec.rb:27:in `block (2 levels) in <top (required)>'[0m
+
+  2) Show page renders the first name in a h1 tag
+     [31mFailure/Error: visit student_path(@student)[0m
+     [31mActionView::Template::Error:[0m
+     [31m  undefined method `active' for #<Student:0x000000064746f8>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__840313926834679382_53110560'[0m
+     [36m# ./spec/features/student_spec.rb:32:in `block (2 levels) in <top (required)>'[0m
+
+  3) Show page renders the last name in a h1 tag
+     [31mFailure/Error: visit student_path(@student)[0m
+     [31mActionView::Template::Error:[0m
+     [31m  undefined method `active' for #<Student:0x000000063e0b60>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__840313926834679382_53110560'[0m
+     [36m# ./spec/features/student_spec.rb:37:in `block (2 levels) in <top (required)>'[0m
+
+  4) Show page renders the active status if the user is inactive
+     [31mFailure/Error: visit student_path(@student)[0m
+     [31mActionView::Template::Error:[0m
+     [31m  undefined method `active' for #<Student:0x0000000631e678>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__840313926834679382_53110560'[0m
+     [36m# ./spec/features/student_spec.rb:42:in `block (2 levels) in <top (required)>'[0m
+
+  5) Show page renders the active status if the user is active
+     [31mFailure/Error: @student.active = true[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `active=' for #<Student:0x00000005d3ce58>[0m
+     [36m# ./spec/features/student_spec.rb:47:in `block (2 levels) in <top (required)>'[0m
+
+  6) Activate page Should mark an inactive stuent as active
+     [31mFailure/Error: visit activate_student_path(@student)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `active' for #<Student:0x00000005c116a0>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./app/controllers/students_controller.rb:13:in `activate'[0m
+     [36m# ./spec/features/student_spec.rb:60:in `block (2 levels) in <top (required)>'[0m
+
+  7) Activate page Should mark an active student as inactive
+     [31mFailure/Error: @student.active = true[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `active=' for #<Student:0x00000005a74e00>[0m
+     [36m# ./spec/features/student_spec.rb:66:in `block (2 levels) in <top (required)>'[0m
+
+  8) Activate page Should redirect to the student show page
+     [31mFailure/Error: visit activate_student_path(@student)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `active' for #<Student:0x000000059b85e8>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./app/controllers/students_controller.rb:13:in `activate'[0m
+     [36m# ./spec/features/student_spec.rb:74:in `block (2 levels) in <top (required)>'[0m
+
+  9) Student has an active attribute that defaults to false
+     [31mFailure/Error: expect(@student.active).to eq(false)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `active' for #<Student:0x00000005735be0>[0m
+     [31m  Did you mean?  acts_like?[0m
+     [36m# ./spec/models/student_spec.rb:13:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 1.19 seconds (files took 3.69 seconds to load)
+[31m14 examples, 9 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/features/student_spec.rb:26[0m [36m# Show page renders properly[0m
+[31mrspec ./spec/features/student_spec.rb:31[0m [36m# Show page renders the first name in a h1 tag[0m
+[31mrspec ./spec/features/student_spec.rb:36[0m [36m# Show page renders the last name in a h1 tag[0m
+[31mrspec ./spec/features/student_spec.rb:41[0m [36m# Show page renders the active status if the user is inactive[0m
+[31mrspec ./spec/features/student_spec.rb:46[0m [36m# Show page renders the active status if the user is active[0m
+[31mrspec ./spec/features/student_spec.rb:59[0m [36m# Activate page Should mark an inactive stuent as active[0m
+[31mrspec ./spec/features/student_spec.rb:65[0m [36m# Activate page Should mark an active student as inactive[0m
+[31mrspec ./spec/features/student_spec.rb:73[0m [36m# Activate page Should redirect to the student show page[0m
+[31mrspec ./spec/models/student_spec.rb:12[0m [36m# Student has an active attribute that defaults to false[0m
