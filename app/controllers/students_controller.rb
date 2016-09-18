@@ -10,6 +10,11 @@ class StudentsController < ApplicationController
   end
 
   def active
+    @student = Student.find_by_id(id)
+    if !@student.active
+      @student.active = true
+      @student.save
+    end
   end
 
   private

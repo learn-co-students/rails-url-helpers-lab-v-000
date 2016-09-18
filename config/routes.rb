@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   #     URL   controller class + action   new name of route
   # get "students/", to: "students#index"
   # get "students/:id", to: "students#show", as: "student"
-  get "student/:id/active", to: "students#active"
+  get "student/:id/active", to: "students#active", as: "activate"
   #     URL                    controller class + action
+  # Activate page Should redirect to the student show page
 end
