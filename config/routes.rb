@@ -5,10 +5,8 @@ Rails.application.routes.draw do
   # However, for the sake of this lab and seeing how you can pass params through
   # the route, we'll keep it explicit for now and refactor later.
 
-  #     URL   controller class + action   new name of route
-  # get "students/", to: "students#index"
-  # get "students/:id", to: "students#show", as: "student"
-  get "student/:id/active", to: "students#active", as: "activate"
+  #     URL                       controller class + action   new name of route
+  get "/students/:id/activate", to: "students#activate", as: "activate_student"
   #     URL                    controller class + action
   # Activate page Should redirect to the student show page
 end
