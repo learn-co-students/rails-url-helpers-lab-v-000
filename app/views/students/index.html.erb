@@ -1,5 +1,5 @@
 <div>
-<h3>Old Way</h3>
+<h3>Sinatra Way</h3>
   <% @students.each do |student| %>
   <div><a href="/students/<%= "#{student.id}" %>"><%= "#{student}" %></a></div>
   <% end %>
@@ -12,7 +12,7 @@
 <h3>(1) Rails Way</h3>
 <div>
   <% @students.each do |student| %>
-  <div><%= link_to student, "/students/#{student.id}" %></a></div>
+  <div><%= link_to student.to_s, "/students/#{student.id}" %></a></div>
   <% end %>
 </div>
 
@@ -23,7 +23,7 @@
 <h3>(2) Rails Way: 1st refactor</h3>
 <div>
   <% @students.each do |student| %>
-  <div><%= link_to student, student_path(student.id) %></a></div>
+  <div><%= link_to student.to_s, student_path(student.id) %></a></div>
   <% end %>
 </div>
 
@@ -34,6 +34,6 @@
 <h3>(3) Rails Way: 2nd refactor</h3>
 <div>
   <% @students.each do |student| %>
-  <div><%= link_to(student, student_path(student)) %></a></div>
+  <div><%= link_to(student.to_s, student_path(student)) %></a></div>
   <% end %>
 </div>
