@@ -1,11 +1,21 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
-  
+
   def index
     @students = Student.all
   end
 
   def show
+    if @student.active == true
+      @status = "active"
+    else
+      @status = "inactive"
+    end
+    binding.pry
+  end
+
+  def activate
+    @student = Student.find(params[:format])
   end
 
   private
@@ -13,4 +23,5 @@ class StudentsController < ApplicationController
     def set_student
       @student = Student.find(params[:id])
     end
+
 end
