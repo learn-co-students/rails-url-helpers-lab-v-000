@@ -11,11 +11,12 @@ class StudentsController < ApplicationController
     else
       @status = "inactive"
     end
-    binding.pry
   end
 
   def activate
-    @student = Student.find(params[:format])
+    @student = Student.find(params[:id])
+    @student.toggle!(:active)
+    redirect_to student_path(@student)
   end
 
   private
