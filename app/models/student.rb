@@ -4,7 +4,7 @@ class Student < ActiveRecord::Base
     self.first_name + " " + self.last_name
   end
 
-  def default_value
-          @student.active = false
+  def activate
+    self.toggle(:active).save
   end
 end

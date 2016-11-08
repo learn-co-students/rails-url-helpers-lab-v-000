@@ -10,8 +10,8 @@ class StudentsController < ApplicationController
 
   def activate
       @student = set_student
-      @student.active = !@student.active
-      render 'show'
+      @student.activate
+      redirect_to action: "show"
   end
 
   private
