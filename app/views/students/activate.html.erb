@@ -1,0 +1,8 @@
+<h1>Dear Mr. <%= @student.last_name %></h1>
+<p>
+  Your are currently <%= @student.active? ? "active :)" : "inactive :(" %>
+</p>
+<!--
+<%= button_to [:toggle_state, @student] do %>
+  Make <%= @student.first_name %> <strong><%= @student.active? ? "inactive" : "active" %></strong>
+<% end %> -->
