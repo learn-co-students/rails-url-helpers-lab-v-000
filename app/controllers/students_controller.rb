@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: :show
+  before_action :set_student, only: [:show, :activate]
   
   def index
     @students = Student.all
@@ -7,6 +7,13 @@ class StudentsController < ApplicationController
 
   def show
   end
+
+  def activate
+    @student.activate
+    @student.save
+    redirect_to student_path(@student)
+  end
+
 
   private
 
