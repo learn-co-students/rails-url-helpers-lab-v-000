@@ -11,9 +11,9 @@ class StudentsController < ApplicationController
 
   def activate
     @student = Student.find(params[:id])
-    binding.pry
     @student.toggle(:active)
     @student.save
+    redirect_to show
   end
 
   private

@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get 'students/:id' => 'students#show'
   get 'students' => 'students#index'
-  get 'students/:id' => 'students#activate', :as => :activate_student
+  get 'students/:id/activate' => 'students#activate', :as => :activate_student
 end
