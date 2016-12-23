@@ -8,5 +8,5 @@ Rails.application.routes.draw do
    get '/students_path', to: 'students#index'
    get '/student_path', to: "students#show"
   
-  #student_path(@student)
+   get '/student/:id/activate', to: "students# "
 end
