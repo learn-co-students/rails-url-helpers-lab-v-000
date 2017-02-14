@@ -1,3 +1,4 @@
+require 'pry'
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
 
@@ -6,9 +7,19 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    set_student
   end
 
+  def activate
+    set_student
+    if @student.active == true
+      @student.active = false
+    else
+      @student.active = true
+    end
+    @student.save
+    redirect_to action: "show"
+  end
 
   private
 
