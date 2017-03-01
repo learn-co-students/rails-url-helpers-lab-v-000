@@ -21,14 +21,14 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * Create a new boolean attribute called `active` in the students table. (HINT: You might have to search around for the best way to set a (*ahem*) __default value__.)
 
-* A user should be able to go to `/student/:id/activate` to toggle their `active` attribute between `true` and `false`.
+* A user should be able to go to `/students/:id/activate` to toggle their `active` attribute between `true` and `false`.
 
 * Read the failing tests and modify the code until they pass. 
 
 
 ## Keep in mind
 
-* Make sure the show path is `/student/:id`, where `:id` is a route variable.
+* Make sure the show path is `/students/:id`, where `:id` is a route variable.
 
 * Call the Student class instance method `to_s` on each of the students on the index page so that each student element contains their first and last name.
 
@@ -42,3 +42,5 @@ In this lab you will be building out the Student management dashboard for the Fl
 * [URL Helper Documentation](http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-url-helpers-lab' title='Rails URL Helpers Lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/rails-url-helpers-lab'>Rails URL Helpers Lab</a> on Learn.co and start learning to code for free.</p>
