@@ -1,5 +1,8 @@
+
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <div><%= link_to student.to_s, student_path(student) %></div>
   <% end %>
 </div>
+
+<!-- here i'm linking to the student.to_s method, and student_path(student), which will take you to each one's show page using their ids, but dynamically. -->
