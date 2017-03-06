@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0.0'
@@ -32,4 +33,3 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
 end
-
