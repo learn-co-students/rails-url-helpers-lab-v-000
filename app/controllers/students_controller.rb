@@ -28,16 +28,6 @@ class StudentsController < ApplicationController
     else
       @student.active = 1
     end
-
-
-
-
-
-    # if params[:action] == "activate"
-    #   @student.active = 1
-    # else
-    #   @student.active = 0
-    # end
     @student.save
     redirect_to student_path(@student)
   end
