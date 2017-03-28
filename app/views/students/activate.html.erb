@@ -1,16 +1,3 @@
-<h1><%= @student.to_s %></h1>
-
-<% if @student.active == false %>
-  <h3>This student is currently inactive.</h3>
-<% else %>
-  <h3>This student is currently active.</h3>
-<% end %>
-
-<a href="/students/<%= @student.id %>/activate">Change Activation</a>
-
-
-
-
 <form action="/students/<%= @student.id %>/activate" method="post">
   <input type="checkbox" name="activate" value="Activate">Activate
   <input type="checkbox" name="deactivate" value="deactivate">De-activate
