@@ -6,6 +6,15 @@ class StudentsController < ApplicationController
   end
 
   def show
+    set_student
+  end
+
+  def active
+    set_student
+    @student.activate_student
+    @student.save
+    #redirect_to "/students/#{@student.id}" - hardcoded 
+    redirect_to student_path(@student) # - Route helper
   end
 
   private
