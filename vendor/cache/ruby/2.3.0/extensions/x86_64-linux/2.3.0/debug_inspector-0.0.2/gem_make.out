@@ -1,0 +1,15 @@
+current directory: /home/danlrcn-32508/code/labs/rails-url-helpers-lab-v-000/vendor/cache/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+/usr/local/rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20170417-25627-13kc37t.rb extconf.rb
+creating Makefile
+
+current directory: /home/danlrcn-32508/code/labs/rails-url-helpers-lab-v-000/vendor/cache/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /home/danlrcn-32508/code/labs/rails-url-helpers-lab-v-000/vendor/cache/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.so
+
+current directory: /home/danlrcn-32508/code/labs/rails-url-helpers-lab-v-000/vendor/cache/ruby/2.3.0/gems/debug_inspector-0.0.2/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -m 0755 debug_inspector.so ./.gem.20170417-25627-1f6pisr
