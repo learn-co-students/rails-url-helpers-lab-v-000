@@ -4,10 +4,10 @@ class Student < ActiveRecord::Base
   end
 
   def active_phrase
-    if active
-      "This student is currently active."
-    else
-      "This student is currently inactive."
-    end
+    active ? "This student is currently active." : "This student is currently inactive."
+  end
+
+  def active_action
+    active ? "Deactivate" : "Activate"
   end
 end
