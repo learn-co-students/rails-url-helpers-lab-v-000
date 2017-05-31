@@ -1,1 +1,11 @@
 <h1><%= @student.to_s %></h1>
+
+<h1>This student is currently 
+	<% if @student.active == true %>
+		active.
+	<% elsif @student.active == false %>
+		inactive.
+	<% end %>
+	</h1>
+
+	
