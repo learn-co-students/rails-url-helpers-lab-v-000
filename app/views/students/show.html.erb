@@ -1,1 +1,2 @@
-<h1><%= @student.to_s %></h1>
+<h1><%= link_to @student.id, student_path(@student) %><%= @student.to_s %></h1>
+<%= @active %>
