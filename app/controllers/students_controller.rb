@@ -8,6 +8,12 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def activate
+    set_student
+    @student.update_attributes(active: !@student.active)
+    redirect_to @student
+  end
+
   private
 
     def set_student
