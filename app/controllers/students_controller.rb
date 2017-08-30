@@ -7,10 +7,9 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    #binding.pry
   end
 
-  def active
+  def activate
     @student = Student.find(params[:id])
     # so, I drew a map from a url to the students controller and the active action
     # the student active attribute is default to  false, so
