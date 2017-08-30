@@ -29,7 +29,7 @@ describe 'Show page' do
   end
 
   it 'renders the first name in a h1 tag' do
-    visit student_path(@student)
+    visit student_path(@student) 
     expect(page).to have_css("h1", text: "Daenerys")
   end
 
