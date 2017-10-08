@@ -1,1 +1,10 @@
 <h1><%= @student.to_s %></h1>
+
+<%status = @student.active ? "active" : "inactive" %>
+<p>This student is currently <%=status%>.</p>
+<!-- <form action="/student/<%=@student.id%>/activate_student" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="submit" value="Activate/Inactivate <%=@student.to_s%>">
+</form> -->
+
+<%=link_to "Activate/Inactivate #{@student.to_s}", activate_student_path(@student) %>

@@ -1,5 +1,11 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <div>
+      <%=link_to student.to_s, student_path(student)%>
+      <form action="/student/<%=student.id%>/activate_student" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <input type="submit" value="Activate/Inactivate <%=student.to_s%>">
+      </form>
+    </div>
   <% end %>
 </div>
