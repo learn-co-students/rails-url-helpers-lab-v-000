@@ -13,15 +13,8 @@ class StudentsController < ApplicationController
 
   def edit
     set_student.active ? set_student.update(active: false) : set_student.update(active: true)
-    redirect_to action: 'show', id: set_student.id
+    redirect_to student_path(set_student)
   end
-
-  # def activate
-  #   @student = Student.find(params[:id])
-  #   @student.active = !@student.active
-  #   @student.save
-  #   redirect_to student_path(@student)
-  # end
 
   private
 
