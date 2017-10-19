@@ -11,14 +11,23 @@ class StudentsController < ApplicationController
 
   def activate
     @student = Student.find(params[:id])
-    if @student.active == false
-      @student.active = true
-    else
-      @student.active = false
-    end
+    @student.active = !@student.active
     @student.save
-    redirect_to action: "show", id: @student.id
+    redirect_to student_path(@student)
+      # ^^ available due to this in my routes: resources :students, only: :show 
   end
+
+  # def activate # my NOOB way.
+  #   @student = Student.find(params[:id])
+  #   if @student.active == false
+  #     @student.active = true
+  #   else
+  #     @student.active = false
+  #   end
+  #   @student.save
+  #   redirect_to action: "show", id: @student.id
+  # end
+
 
   private
 
