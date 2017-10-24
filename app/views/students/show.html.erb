@@ -1,7 +1,6 @@
 <% if @student.active %>
     <h1><%="This student is currently active." %></h1>
-    <h1><%= @student.first_name.to_s %> <%= @student.last_name.to_s %></h1>
 <% elsif !@student.active %>
     <h1><%="This student is currently inactive." %></h1>
-    <h1><%= @student.first_name.to_s %> <%= @student.last_name.to_s %></h1>
 <% end %>
+<h1><%= @student.first_name.to_s %> <%= @student.last_name.to_s %></h1>
