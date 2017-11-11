@@ -1,0 +1,5 @@
+<form action=<%= "/students/#{@student.id}/activate" %>method="post">
+  <label for="">Active <input type="radio" name="student[active]" value="true" <%= "checked" if @student.active %>></label><br>
+  <label for="">Inactive <input type="radio" name="student[active]" value="false" <%= "checked" if !@student.active %>></label><br>
+  <input type="submit" name="submit" value="submit">
+</form>
