@@ -9,15 +9,16 @@ class StudentsController < ApplicationController
   def show
   end
 
+  def update
+    # byebug
+    @student.active = !@student.active
+    @student.save
+    redirect_to student_path(@student)
+  end
+
   def activate
   end
 
-  def update
-    byebug
-    @student.active = params["student"]["active"]
-    @student.save
-    redirect to student_path(@student)
-  end
 
   private
 
