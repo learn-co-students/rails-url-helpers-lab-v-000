@@ -1,6 +1,7 @@
 require 'byebug'
 require 'rails_helper'
 
+
 describe 'Route to view' do
   it 'has an index page' do
     visit students_path
@@ -30,6 +31,7 @@ describe 'Show page' do
 
   it 'renders the first name in a h1 tag' do
     visit student_path(@student)
+
     expect(page).to have_css("h1", text: "Daenerys")
   end
 
