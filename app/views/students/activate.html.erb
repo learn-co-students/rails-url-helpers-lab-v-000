@@ -1,0 +1,18 @@
+
+<h1><%= @student.to_s %></h1>
+
+<h2>Active:</h2>
+
+<%=form_for @student do |f|%>
+  <%=f.label :active, 'Activate Student'%>
+  <%= f.radio_button :active, 'true'%>
+  <p><%= f.submit %><p>
+<%end%>
+
+
+  <!-- <form action="/students/<%=@student.id%>/activate" method="POST">
+    <input type="radio" name="active" value="true", 'checked' if <% @student.active%>>True</input>
+    <input type="radio" name="active" value="false", 'checked' if <% !@student.active%>>False</input>
+    <br></br>
+    <input type="submit" name="submit"></input>
+  </form> -->
