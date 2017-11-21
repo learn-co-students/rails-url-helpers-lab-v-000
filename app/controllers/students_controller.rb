@@ -17,6 +17,6 @@ class StudentsController < ApplicationController
       @student = Student.find_by(params[:id])
       @student.active = !@student.active
       @student.save
-      redirect_to student_path(@student)
+      redirect_to student_path(@student.id)
     end
 end
