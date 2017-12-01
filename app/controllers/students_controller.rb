@@ -8,7 +8,7 @@ class StudentsController < ApplicationController
   def show
   end
   
-  def activate_student
+  def activate
     set_student
     if @student.active == true
       @student.active = false
