@@ -1,0 +1,11 @@
+<h1>Set Student to Active (or Inactive)</h1>
+
+<% if @student.active == false %>
+  <% @student.active = true %>
+  <% @student.save %>
+  <%= link_to "Active Student", student_path(@student.id) %>
+<% else %>
+  <% @student.active = false %>
+  <% @student.save %>
+  <%= link_to "Deactive Student", student_path(@student.id) %>
+<% end %>
