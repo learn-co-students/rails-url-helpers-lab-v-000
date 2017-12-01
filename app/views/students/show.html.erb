@@ -1,1 +1,7 @@
-<h1><%= @student.to_s %></h1>
+<h1><%= link_to @student.to_s, students_path(@student)%></h1>
+
+<% if @student.active == true %>
+"This student is currently active."
+<%else%>
+"This student is currently inactive."
+<%end%>
