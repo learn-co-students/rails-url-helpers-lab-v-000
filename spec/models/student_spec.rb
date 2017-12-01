@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe Student do
   before(:each) do
