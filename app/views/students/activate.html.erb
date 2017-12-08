@@ -1,0 +1,5 @@
+<% if @student.active == true %>
+  <% @student.active = false, link_to student_path(student) %>
+<% else %>
+  <% @student.active = true, link_to student_path(student) %>
+<% end %>
