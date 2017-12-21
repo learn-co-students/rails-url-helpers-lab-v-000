@@ -12,10 +12,9 @@ class StudentsController < ApplicationController
 
   def activate
     @student = set_student
-    # @student.toggle :active
-    # binding.pry
     @student.toggle(:active)
     @student.save
+    redirect_to student_path(@student)
   end
 
   private
