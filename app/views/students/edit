@@ -1,0 +1,8 @@
+activate page
+<%= form_tag("/students/:id", method: "patch") do %>
+<%= radio_button_tag(:active, "true") %>
+<%= label_tag(:active_true, "Activate") %>
+<%= radio_button_tag(:active, "false") %>
+<%= label_tag(:active_false, "Deactivate") %>
+<%= submit_tag("Activate") %>
+<% end %>
