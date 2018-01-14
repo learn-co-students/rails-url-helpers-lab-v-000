@@ -3,3 +3,16 @@
     <div><%= student.first_name + " " + student.last_name %></div>
   <% end %>
 </div>
+
+
+<% @students.each do |student| %>
+  <div><a href='<%= "/students/#{student.id}" %>'><%= student.to_s %></a></div>
+<% end %>
+
+<% @students.each do |student| %>
+  <div><%= link_to student, "/students/#{student.id}" %></div>
+<% end %>
+
+<% @students.each do |student| %>
+  <div><%= link_to student, student_path(student) %></div>
+<% end %>
