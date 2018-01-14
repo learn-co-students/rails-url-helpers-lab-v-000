@@ -1,0 +1,7 @@
+<h1>Change status </h1>
+
+<form method="post" action="students/<%=@student.id%>">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="checkbox" name="student[active]" value="<%='checked' if @student.active %>">
+  <input type="submit" value="submit">
+</form>
