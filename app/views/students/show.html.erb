@@ -1,1 +1,6 @@
 <h1><%= @student.to_s %></h1>
+<p>
+  <%= 'This student is currently ' + "#{ @student.active == true ? 'active.' : 'inactive.' }" %>
+</p>
+<%= link_to("Change status", activate_student_path(@student), method: :patch) %>
+<!-- <%= link_to "#{ @student.active ? 'False' : 'True' }", activate_student_path(@student), :method => :post  %> -->

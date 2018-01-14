@@ -1,0 +1,10 @@
+<h1><%= @student.to_s %></h1>
+
+<%= link_to("Change status", toggle_activation_student_path(@student), method: :patch) %>
+<!-- <h1><%=# @student.to_s %></h1>
+<%=# link_to "Change status", toggle_activation_student_path(@student), method: :patch, remote: :true %>
+
+<%= link_to("Change status", toggle_activation_path(@student), method: patch) %>
+<%=# button_to "Change status", @student.toggle! :active %>
+<%=# button_to "Change status", :controller => "students", :action => "toggle_activation" %>
+<%=# link_to "Change Status", "#{ @student.active ? false : true }", student_path(@student), :method => :post  %> -->
