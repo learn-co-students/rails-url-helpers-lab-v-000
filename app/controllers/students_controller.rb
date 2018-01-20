@@ -11,11 +11,13 @@ class StudentsController < ApplicationController
 
   def activate
     @student = Student.find(params[:id])
-    if @student.active.eql?(true)
-      @student.update(active: false)
-    else
-      @student.update(active: true)
-    end
+    # if @student.active.eql?(true)
+    #   @student.update(active: false)
+    # else
+    #   @student.update(active: true)
+    # end
+    @student.active = !@student.active
+    @student.save
     redirect_to student_url(@student)
   end
 
