@@ -3,10 +3,15 @@ class StudentsController < ApplicationController
   before_action :set_student, only: :show
 
   def activate
-    binding.pry
     @student = Student.find(params[:id])
-    @student.active = true
-    redirect_to "#{student_show_path(@student)}"
+    if @student.active == true
+      @student.active = false
+      @student.save
+    else
+      @student.active = true
+      @student.save
+    end
+    redirect_to student_path(@student)
   end
 
   def index
