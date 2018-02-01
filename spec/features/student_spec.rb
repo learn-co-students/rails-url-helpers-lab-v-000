@@ -1,5 +1,6 @@
 require 'byebug'
 require 'rails_helper'
+require 'pry'
 
 describe 'Route to view' do
   it 'has an index page' do
@@ -21,6 +22,7 @@ end
 describe 'Show page' do
   before do
     @student = Student.create!(first_name: "Daenerys", last_name: "Targaryen")
+#binding.pry
   end
 
   it 'renders properly' do
@@ -39,6 +41,7 @@ describe 'Show page' do
   end
 
   it 'renders the active status if the user is inactive' do
+#binding.pry
     visit student_path(@student)
     expect(page).to have_content("This student is currently inactive.")
   end
