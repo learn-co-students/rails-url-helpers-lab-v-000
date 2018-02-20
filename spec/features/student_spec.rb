@@ -47,6 +47,7 @@ describe 'Show page' do
     @student.active = true
     @student.save
     visit student_path(@student)
+
     expect(page).to have_content("This student is currently active.")
   end
 end
