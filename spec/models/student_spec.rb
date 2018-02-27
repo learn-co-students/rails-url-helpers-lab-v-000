@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe Student do
   before(:each) do
@@ -10,6 +11,7 @@ describe Student do
   end
 
   it 'has an active attribute that defaults to false' do
+    binding.pry
     expect(@student.active).to eq(false)
   end
 
