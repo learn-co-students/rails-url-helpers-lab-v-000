@@ -4,6 +4,6 @@ class Student < ActiveRecord::Base
   end
 
   def active
-    self.active
+    self[:active]
   end
 end
