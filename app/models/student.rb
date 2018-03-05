@@ -10,4 +10,14 @@ class Student < ActiveRecord::Base
       "This student is currently inactive."
     end
   end
+
+  def activate
+    self.active = true
+    self.save
+  end
+
+  def deactivate
+    self.active = false
+    self.save
+  end
 end
