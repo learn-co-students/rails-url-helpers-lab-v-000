@@ -16,16 +16,9 @@ ActiveRecord::Schema.define(version: 2) do
   create_table "students", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-<<<<<<< HEAD
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.boolean  "active",     default: false
-=======
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.boolean  "activate",   default: true
-    t.boolean  "active",     default: true
->>>>>>> 0f0cd2d30514ba10ee841285cff3ed335f80e438
   end
 
 end
