@@ -10,21 +10,19 @@ class StudentsController < ApplicationController
   end
 
   def active
-<<<<<<< HEAD
     # @student = Student.find(params[:id])
     # if @student.active
     #   @student.update(active: false)
     # else
     #   @student.update(active: true)
     # end
-=======
+
     @student = Student.find(params[:id])
     if @student.active
       @student.active = false
     else
       @student.active = true
     end
->>>>>>> 0f0cd2d30514ba10ee841285cff3ed335f80e438
   end
 
   private
