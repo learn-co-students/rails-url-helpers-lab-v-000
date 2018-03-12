@@ -1,11 +1,16 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
-  
+
   def index
     @students = Student.all
   end
 
   def show
+  end
+
+  def activate
+    student = Student.find(params[:id])
+    student.toggle!(:active)
   end
 
   private
