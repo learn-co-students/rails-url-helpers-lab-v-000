@@ -8,3 +8,8 @@
 Student.create(first_name: "Moe", last_name: "Szmanski")
 Student.create(first_name: "Chef", last_name: "Levi")
 Student.create(first_name: "Larry", last_name: "Borski")
+
+Turtle.create(name: "Leonardo", age: 17)
+Turtle.create(name: "Raphael", age: 14)
+Turtle.create(name: "Michalangello", age: 15)
+Turtle.create(name: "Donatello", age: 16)
