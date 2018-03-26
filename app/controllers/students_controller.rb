@@ -9,6 +9,16 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def activate_student_path
+    @student = Student.find(param[:id])
+    @status = @student.active
+    if @status == false
+      @student.active = true
+    else
+      @student.active = false
+    end
+  end
+
   private
 
     def set_student
