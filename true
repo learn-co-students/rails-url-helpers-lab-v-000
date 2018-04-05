@@ -1,0 +1,6 @@
+      invoke  active_record
+      create    db/migrate/20180405185850_add_active_to_students.rb
+Array values in the parameter to `Gem.paths=` are deprecated.
+Please use a String or nil.
+An Array ({"GEM_PATH"=>["/usr/local/rvm/gems/ruby-2.3.1", "/usr/local/rvm/gems/ruby-2.3.1@global"]}) was passed in from bin/rails:3:in `load'
+Running via Spring preloader in process 11221
