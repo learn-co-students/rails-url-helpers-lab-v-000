@@ -6,7 +6,16 @@ class StudentsController < ApplicationController
   end
 
   def show
-    
+
+  end
+
+  def active_status
+    if set_student.active == false
+      @active_status = "inactive"
+    else
+      @active_status = "active"
+    end
+    @active_status
   end
 
   private
