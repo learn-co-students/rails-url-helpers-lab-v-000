@@ -9,7 +9,6 @@ class StudentsController < ApplicationController
   end
 
   def activate_student
-    # binding.pry
      @student.active = !@student.active 
      @student.save
      redirect_to @student 
