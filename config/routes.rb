@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   # the route, we'll keep it explicit for now and refactor later.
   #get "students/:id", to: "students#show"
   resources :students, only: :show
+  resources :students, only: :activate_student
 end
