@@ -1,7 +1,7 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :toggle_active]
+  before_action :set_student, only: [:show, :activate]
   before_action :status, only: [:show]
-  
+
   def index
     @students = Student.all
   end
@@ -9,7 +9,7 @@ class StudentsController < ApplicationController
   def show
   end
 
-  def toggle_active
+  def activate
     @student.toggle!(:active)
     redirect_to student_path
   end
@@ -21,10 +21,10 @@ class StudentsController < ApplicationController
     end
 
     def status
-      if @student.active == false
-        @status = "inactive"
-      else 
+      if @student.active
         @status = "active"
+      else 
+        @status = "inactive"
       end
     end
 end
