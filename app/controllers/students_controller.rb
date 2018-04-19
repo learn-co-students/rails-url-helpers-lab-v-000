@@ -11,10 +11,11 @@ class StudentsController < ApplicationController
     else
       @active_status = "inactive"  
     end
-    
   end
 
   def activate_student
+    !set_student
+    #!@student.active
   end
 
 
