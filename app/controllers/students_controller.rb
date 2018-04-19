@@ -14,9 +14,10 @@ class StudentsController < ApplicationController
   end
 
   def activate_student
+    set_student
+    #!set_student.active
 
-    !set_student.active
-    set_student.save
+    #set_student.save
 
   end
 
