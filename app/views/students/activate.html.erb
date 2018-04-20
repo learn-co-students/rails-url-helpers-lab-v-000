@@ -1,3 +1,6 @@
-<form action="index.html" method="post">
-
+<form action="students/:id" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <input type="radio" name="true" value="active">Active<br>
+  <input type="radio" name="false" value="inactive">Inactive<br>
+  <input type="submit" value="Update">
 </form>

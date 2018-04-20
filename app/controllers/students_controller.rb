@@ -8,7 +8,10 @@ class StudentsController < ApplicationController
   def show
   end
 
-  def activate
+  def activate_student(id)
+    @student = Student.find(id: id)
+    @student.status = params[:status]
+    @student.update
   end
 
   private
