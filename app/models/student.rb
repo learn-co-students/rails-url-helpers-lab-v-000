@@ -4,10 +4,13 @@ class Student < ActiveRecord::Base
   end
 
   def status
-    if self.active == false
-      @status = "This student is currently inactive."
-    else
+    if self.active
       @status = "This student is currently active."
+    else
+      @status = "This student is currently inactive."
     end
+  end
+
+  def activate
   end
 end
