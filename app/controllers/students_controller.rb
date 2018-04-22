@@ -11,18 +11,22 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
-  def edit
+  def activate
     @student = Student.find(params[:id])
   end
 
   def update
     @student = Student.find(params[:id])
-    if params[:active]
+
+    if params[:active] == "true"
+      @student.active = true
+      @student.save
 
       redirect_to student_path
     else
       @student.active = false
-      binding.pry
+      @student.save
+
       redirect_to student_path
     end
   end
