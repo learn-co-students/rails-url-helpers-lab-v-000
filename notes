@@ -1,0 +1,68 @@
+
+<!-- <%= check_box :active, :boolean_attribute, {}, 'true' %> -->
+
+  <!-- <%= check_box_tag(:active, 1, true) %> -->
+
+
+<!-- <%= check_box('person', 'is_approved', options = {:index => person.id,
+:checked => person.is_approved}, checked_value = "1", unchecked_value =
+"0") %> -->
+
+<!-- <%= check_box('active', 'active', options = {:index => student.id}, :checked => student.active, checked_value = "1", unchecked_value = "0") %> -->
+
+
+<form method="post" action='/student'>
+  <input name="_method" type="hidden" value="patch">
+  <%= check_box_tag(:active, 1, checked: true, unchecked: false) %>
+  <%= label_tag(:active, "Active") %>
+  <p><%= submit_tag(value = "Update") %></p>
+</form>
+
+
+<%@comments.each do |comment|%>
+  <p><input id="checkBox" type="checkbox" name="student[comment_ids][]" value="<%=comment.id%>" <%='checked' if @student.comments.include?(comment) %>>"<%=comment.description%>" </p>
+<%end%>
+
+
+-------
+
+<form method="POST" action="<%= student_path(@student.id) %>">
+  <input type="hidden" id="hidden" name="_method" value="patch">
+  <%= check_box_tag(:active, 1, checked: 'true', unchecked: 'false') %>
+  <%= label_tag(:active, "Active") %>
+  <p><%= submit_tag(value = "Update") %></p>
+</form>
+
+
+check_box_tag(name, value = "1", checked = false, options = {})
+
+
+-----
+
+<form method="POST" action="<%=student_path(@student.id)%>">
+  <input type="hidden" id="hidden" name="_method" value="patch">
+
+  <p><input id="checkbox" type="checkbox" name="active" value="active" <%='checked' if @student.active == 'true' %>>Active</p>
+
+  <br>
+  <input type="submit" value="Update">
+</form>
+
+------
+
+<%= form_tag(student_path(@student), method: "post") do %>
+<input type="hidden" id="hidden" name="_method" value="patch">
+
+  <% if @student.active == "true" %>
+
+    <%= check_box_tag(:active, 1, checked = true) %>
+    <%= label_tag(:active, "Active") %>
+
+  <% else %>
+    <%= check_box_tag(:active, 0, checked = false) %>
+    <%= label_tag(:active, "Active") %>
+  <% end %>
+
+  <p> <%= submit_tag("Update") %> </p>
+
+<% end %>
