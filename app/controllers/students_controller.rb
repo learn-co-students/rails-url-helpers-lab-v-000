@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
       @student.active = false
       @student.save
     end
-    redirect_to show
+    redirect_to action: "show", id: params[:id]
   end
 
   private
