@@ -66,3 +66,13 @@ check_box_tag(name, value = "1", checked = false, options = {})
   <p> <%= submit_tag("Update") %> </p>
 
 <% end %>
+
+-----
+
+<%= form_tag(student_path, method: "post") do %>
+  <input type="hidden" id="hidden" name="_method" value="patch">
+
+  <%= check_box_tag(:active, checked = "true", unchecked = "false") %>
+
+  <%= label_tag(:active, "Active") %>
+  <p> <%= submit_tag("Update") %> </p>
