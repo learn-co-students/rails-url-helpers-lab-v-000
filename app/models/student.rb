@@ -16,11 +16,7 @@ class Student < ActiveRecord::Base
   end
 
   def switch_status
-    if self.active == true
-      self.update(active: false)
-    else
-      self.update(active: true)
-    end
+    self.toggle!(:active)
   end
 
 end
