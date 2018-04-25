@@ -18,10 +18,8 @@ class Student < ActiveRecord::Base
   def switch_status
     if self.active == true
       self.update(active: false)
-      self.save
     else
       self.update(active: true)
-      self.save
     end
   end
 
