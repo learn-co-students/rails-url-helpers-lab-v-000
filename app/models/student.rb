@@ -15,4 +15,14 @@ class Student < ActiveRecord::Base
     end
   end
 
+  def switch_status
+    if self.active == true
+      self.update(active: false)
+      self.save
+    else
+      self.update(active: true)
+      self.save
+    end
+  end
+
 end
