@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  get "students/:id", to: "students#show"
+
   resources :students, only: :index
+
+
+  get 'students/:id', to: 'students#show', as: 'student'
+
+
+
+
+
+
+
 
   # This show route can be refactored into the above resources method call, like so:
   # resources :students, only: [:index, :show]
