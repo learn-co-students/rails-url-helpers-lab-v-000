@@ -9,15 +9,11 @@ class StudentsController < ApplicationController
   def show
   end
 
-  def active 
+  def activate
     @student = Student.find(params[:id])
-    if @student.active == true
-      flash[:notice] = "This student is currently active."
-      # redirect_to @student
-    else
-      flash[:notice] = "This student is currently inactive."
-      # redirect_to @student
-    end
+    @student.active = !@student.active
+    @student.save
+    redirect_to student_path(@student)
   end
 end
 
