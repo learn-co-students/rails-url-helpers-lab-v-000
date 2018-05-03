@@ -1,3 +1,6 @@
-<h1><%= @student.to_s %></h1>
+<h1><%= @student.to_s %></h1><br>
 
-<p><%= flash[:message] %></p>
+ <%= @student.active %>
+ <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>

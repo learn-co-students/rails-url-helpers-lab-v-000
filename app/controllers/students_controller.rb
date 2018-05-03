@@ -1,8 +1,4 @@
-require 'rack-flash'
-
 class StudentsController < ApplicationController
-
-  use Rack::Flash
 
   before_action :set_student, only: :show
   
@@ -16,11 +12,14 @@ class StudentsController < ApplicationController
   def active 
     @student = Student.find(params[:id])
     if @student.active == true
-      flash[:message] = "This student is currently active."
+      flash[:notice] = "This student is currently active."
+      # redirect_to @student
     else
-      flash[:message] = "This student is currently inactive."
+      flash[:notice] = "This student is currently inactive."
+      # redirect_to @student
     end
   end
+end
 
   private
 
@@ -28,11 +27,3 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
 
-    def active 
-      if @student.active == true
-        flash[:message] = "This student is currently active."
-      else
-        flash[:message] = "This student is currently inactive."
-      end
-    end
-end
