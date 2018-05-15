@@ -1,0 +1,9 @@
+<h1><%= @student.to_s %></h1>
+<%= form_tag activate_student_path(@student), method: "put" do %>
+
+  <label>Active: </label><input type='radio' <%if @student.active%>checked<%end%> name='active' value ='true'>
+  <br></br>
+  <label>Inactive: </label><input type='radio' <%if !@student.active%>checked<%end%> name='active' value ='false'>
+  <br></br>
+  <%= submit_tag "Submit Post" %>
+<% end %>
