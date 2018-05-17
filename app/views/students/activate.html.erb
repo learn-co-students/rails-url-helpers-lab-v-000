@@ -1,0 +1,7 @@
+
+<form action="<%=activate_student_path(@student)%>" method="POST">
+<input type="hidden" name="_method" value="PATCH">
+<input type="radio" name="name"> Active
+<input type="radio" name="name"> Inactive
+<input type="submit" value="Update Status">
+</form>
