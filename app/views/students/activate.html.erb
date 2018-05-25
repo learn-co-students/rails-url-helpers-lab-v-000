@@ -1,0 +1,16 @@
+<!-- <head>
+  <meta http-equiv="Refresh" content="url=<%=student_path(@student)%>">
+</head> -->
+
+<!-- NOTE : This page shouldn't actually exist -->
+
+<% if @student.active %>
+  <% @student.update(active: false) %>
+<% else %>
+  <% @student.update(active: true) %>
+<% end %>
+
+<%= link_to @student.to_s, student_path(@student) %>
+
+<!-- https://stackoverflow.com/questions/17236122/what-is-the-difference-between-link-to-redirect-to-and-render -->
+<!-- https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_redirect -->
