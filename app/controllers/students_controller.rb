@@ -6,11 +6,24 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    if !@student.active
+      @state = "inactive"
+    else
+      @state = "active"
+    end
   end
 
   def activate
-  end 
+    set_student
+
+    if @student.active
+      @student.update(active: false)
+    else
+      @student.update(active: true)
+    end
+
+    redirect_to action: "show"
+  end
 
   private
 
