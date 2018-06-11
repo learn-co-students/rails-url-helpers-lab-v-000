@@ -38,7 +38,7 @@ describe 'Show page' do
     expect(page).to have_css("h1", text: "Targaryen")
   end
 
-  it 'renders the active status if the user is inactive' do
+  it 'renders the inactive status if the user is inactive' do
     visit student_path(@student)
     expect(page).to have_content("This student is currently inactive.")
   end
