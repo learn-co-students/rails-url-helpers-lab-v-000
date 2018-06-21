@@ -19,7 +19,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * A user should be able to click the student's name on the `index` page and be taken to that specific student's `show` page.
 
-* Create a new boolean attribute called `active` in the students table. (HINT: You might have to search around for the best way to set a (*ahem*) __default value__.)
+* Create a new boolean attribute called `active` in the students table. (HINT: You might have to search around for the best way to set a (*ahem*) __default value__ (should default to false).)
 
 * A user should be able to go to `/students/:id/activate` to toggle their `active` attribute between `true` and `false`.
 
