@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'students/:id/activate', to: 'students#activate'
   resources :students, only: :index
 
   # This show route can be refactored into the above resources method call, like so:
@@ -6,5 +7,5 @@ Rails.application.routes.draw do
   # However, for the sake of this lab and seeing how you can pass params through
   # the route, we'll keep it explicit for now and refactor later.
   resources :students, only: :show
-  get 'students/:id/activate', to: 'students#activate'
+
 end
