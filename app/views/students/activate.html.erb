@@ -1,1 +1,5 @@
-<%= link_to @student.activate, activate_student_path(@student) %>
+<% if @student.active == false %>
+    <% @student.active = true %>
+<% else %>
+    <% @student.active = false %>
+<% end %>
