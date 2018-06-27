@@ -1,21 +1,22 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: :show
+  before_action :set_student, only: [:show, :activate]
 
   def index
     @students = Student.all
   end
 
   def show
+    @student = set_student
   end
 
-  def activate_student
-    student = set_student
-    if student.active == true
-      student.update(active: false)
+  def activate
+    @student = set_student
+    if @student.active == true
+      @student.update(active: false)
     else
-      student.update(active: true)
+      @student.update(active: true)
     end
-    rendor 'students/show'
+    redirect_to student_path(@student)
   end
 
   private
