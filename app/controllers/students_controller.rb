@@ -10,12 +10,9 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    set_student
-  end
-
-  def update
     @student = set_student
-    @student.update(params.require(:student).permit(:active))
+    @student.active ? @student.active = false : @student.active = true
+    @student.save
     redirect_to @student
   end
 
