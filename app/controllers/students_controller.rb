@@ -15,6 +15,11 @@ class StudentsController < ApplicationController
     @student.save
     redirect_to @student
   end
+  #
+  # def update
+  #   @student = set_student
+  #   @student.update(params.require(:student).permit(:active))
+  # end
 
   private
 
