@@ -1,5 +1,3 @@
-require "pry"
-
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
 
@@ -9,11 +7,19 @@ class StudentsController < ApplicationController
 
   def show
     set_student
-    binding.pry
     if @student.active
       @status = "active"
     else
       @status = "inactive"
+    end
+  end
+
+  def activate
+    set_student
+    if @student.active
+      @student.active = false
+    else
+      @student.active = true
     end
   end
 
