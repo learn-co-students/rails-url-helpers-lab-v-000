@@ -20,9 +20,14 @@ class StudentsController < ApplicationController
     set_student
     if @student.active
       @student.active = false
+    
     else
+      #binding.pry
       @student.active = true
+      #binding.pry
     end
+    @student.save
+      redirect_to student_path
   end
 
   private
