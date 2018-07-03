@@ -1,1 +1,2 @@
-<h1><%= @student.to_s %></h1>
+<h1><%= link_to @student.to_s, activate_student_path(@student) %></h1>
+<h2><%= @message %></h2>
