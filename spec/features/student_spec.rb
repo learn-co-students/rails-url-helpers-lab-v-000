@@ -1,3 +1,4 @@
+require 'pry'
 require 'byebug'
 require 'rails_helper'
 
