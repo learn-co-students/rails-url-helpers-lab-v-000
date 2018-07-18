@@ -1,0 +1,10 @@
+<h1><%= @student.to_s %></h1>
+
+
+<%= form_tag student_path(@student), method: "put" do %>
+<%= radio_button_tag(:active, true, (@student.active == true)) %>
+<%= label_tag(:active_true, "Active") %>
+<%= radio_button_tag(:active, false, (@student.active == false)) %>
+<%= label_tag(:active_false, "Inactive") %>
+ <%= submit_tag("Save") %>
+<% end %>
