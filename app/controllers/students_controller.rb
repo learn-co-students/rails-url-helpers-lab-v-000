@@ -9,10 +9,13 @@ class StudentsController < ApplicationController
     set_student
   end
 
-  def show_activate
+  def activate
     set_student
+    @student.active = !@student.active
+    @student.save
+    render "show"
   end
-  
+
   private
 
     def set_student
