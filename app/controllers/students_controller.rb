@@ -1,3 +1,5 @@
+require "pry"
+
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
 
@@ -13,7 +15,7 @@ class StudentsController < ApplicationController
     set_student
     @student.active = !@student.active
     @student.save
-    render "show"
+    redirect_to show
   end
 
   private
