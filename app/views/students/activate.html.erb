@@ -1,6 +1,5 @@
 <h1><%= @student.to_s %></h1>
   
-  <%if !@student.active%>
-    "true"
-
+  <%if @student.active%>   
+    <h1>!@student.active</h1>
 <%end%>
