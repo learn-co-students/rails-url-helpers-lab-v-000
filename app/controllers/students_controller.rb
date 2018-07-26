@@ -5,6 +5,11 @@ class StudentsController < ApplicationController
     @students = Student.all #where("students.active = ?", true)
   end
 
+  def activate
+    set_student.toggle_activation
+    redirect_to "/students/#{params[:id]}"
+  end
+
   def show
     set_student
   end
