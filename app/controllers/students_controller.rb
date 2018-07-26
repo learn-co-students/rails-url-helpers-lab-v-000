@@ -1,11 +1,17 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
-  
+
   def index
-    @students = Student.all
+    @students = Student.all 
+  end
+
+  def activate
+    set_student.toggle_activation
+    redirect_to "/students/#{params[:id]}"
   end
 
   def show
+    set_student
   end
 
   private
