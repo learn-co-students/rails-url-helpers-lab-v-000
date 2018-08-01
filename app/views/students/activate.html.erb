@@ -1,0 +1,16 @@
+<h1>Activate <%= @student.to_s %></h1>
+<div>
+  <%# <form action="/students/<%= @student.id %1>" method="post"> %>
+  <%#   <% if @student.active %1> %>
+  <%#   <input type="radio" name="active" value="true" checked> True<br /> %>
+  <%#   <input type="radio" name="active" value="false"> False<br /><br /> %>
+  <%# <% else %1> %>
+  <%#   <input type="radio" name="active" value="true"> True<br /> %>
+  <%#   <input type="radio" name="active" value="false" checked> False<br /><br /> %>
+  <%# <% end %1> %>
+  <%#   <input type="submit" name="activate" value="Update" /> %>
+  <%# </form> %>
+    
+<%= button_to "Activate", action: "update" %>    
+
+</div>
