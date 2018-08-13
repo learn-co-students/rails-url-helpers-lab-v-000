@@ -1,4 +1,4 @@
 <h1><%= @student.to_s %></h1>
 <h4>
-  This student is currently <%= link_to(@student.active?, activate_student_path(@student))%>
+  This student is currently <%= link_to(@student.status?, activate_student_path(@student))%>
 </h4>
