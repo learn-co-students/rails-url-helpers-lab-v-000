@@ -1,3 +1,11 @@
-<h1><%= @student.to_s %></h1>
+<% if @student.active %>
+  <p>This student is currently active.</p>
+<% else %>
+  <p>This student is currently inactive.</p>
+<% end %>
 
-<h2>This student is currently <%= @student.active ? "active" : "inactive" %>.</h2>
+<%= form_for @student do |f| %>
+  Active? <%= f.check_box :active %>
+</br>
+  <%= f.submit %>
+<% end %>
