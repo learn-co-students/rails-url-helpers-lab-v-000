@@ -1,7 +1,7 @@
 
 Rails.application.routes.draw do
-  resources :students, only: :index
-  resources :students, only: :show
+  resources :students, only: [:index, :show]
+
   # This show route can be refactored into the above resources method call, like so:
   # resources :students, only: [:index, :show]
   # However, for the sake of this lab and seeing how you can pass params through
