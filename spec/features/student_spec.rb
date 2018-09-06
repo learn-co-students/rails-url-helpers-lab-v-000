@@ -1,4 +1,5 @@
 require 'byebug'
+require 'pry'
 require 'rails_helper'
 
 describe 'Route to view' do
@@ -24,12 +25,14 @@ describe 'Show page' do
   end
 
   it 'renders properly' do
-    visit student_path(@student)
+    visit students_path(@student)
+
     expect(page.status_code).to eq(200)
   end
 
   it 'renders the first name in a h1 tag' do
     visit student_path(@student)
+
     expect(page).to have_css("h1", text: "Daenerys")
   end
 

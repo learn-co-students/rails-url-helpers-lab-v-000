@@ -1,5 +1,7 @@
 <div>
+  <h2>INDEX</h2>
   <% @students.each do |student| %>
     <div><%= student.first_name + " " + student.last_name %></div>
+    <div><%= link_to student.to_s, students_path(student) %></div>
   <% end %>
 </div>
