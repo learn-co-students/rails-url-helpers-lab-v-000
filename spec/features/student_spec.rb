@@ -60,6 +60,7 @@ describe 'Activate page' do
   end
 
   it "Should mark an inactive student as active" do
+    #binding.pry
     visit activate_student_path(@student)
     @student.reload
     expect(@student.active).to eq(true)
