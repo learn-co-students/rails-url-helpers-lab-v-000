@@ -1,4 +1,5 @@
 require 'byebug'
+require 'pry'
 require 'rails_helper'
 
 describe 'Route to view' do
@@ -25,11 +26,13 @@ describe 'Show page' do
 
   it 'renders properly' do
     visit student_path(@student)
+
     expect(page.status_code).to eq(200)
   end
 
   it 'renders the first name in a h1 tag' do
     visit student_path(@student)
+
     expect(page).to have_css("h1", text: "Daenerys")
   end
 
@@ -57,6 +60,7 @@ describe 'Activate page' do
   end
 
   it "Should mark an inactive student as active" do
+    #binding.pry
     visit activate_student_path(@student)
     @student.reload
     expect(@student.active).to eq(true)
