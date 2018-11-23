@@ -1,1 +1,4 @@
 <h1><%= @student.to_s %></h1>
+
+<% status = @student.active == true ? "active" : "inactive" %>
+<h2>This student is currently <%= status %>.</h2>
