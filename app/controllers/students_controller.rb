@@ -6,7 +6,9 @@ class StudentsController < ApplicationController
   end
 
   def show
-    # set_student
+  end
+
+  def activate_student_path(student)
   end
 
   private
