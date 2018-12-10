@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # resources :students, :activate
   # resources :activate_student, only: [:index, :show]
   resources :activate
-  
+  resources 'activate_student', :only => [:new, :create]
 
 
   # This show route can be refactored into the above resources method call, like so:
