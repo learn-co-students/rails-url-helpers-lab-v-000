@@ -1,6 +1,2 @@
-<% if @student.active == false %>
-  <% @student.active = true %>
-<% else %>
-  <% @student.active = false %>
-<% end %>
-<%= @student %>
+<% @student.active ? @student.active = false : @student.active = true %>
+<% @student.save %>

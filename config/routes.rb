@@ -10,9 +10,6 @@ Rails.application.routes.draw do
   # resources :students, only: [:index, :show]
   # However, for the sake of this lab and seeing how you can pass params through
   # the route, we'll keep it explicit for now and refactor later.
-  # []
-  # get "students/", to: "students#index"
-  get "students/:id", to: "students#show"
+  # get "students/:id", to: "students#show"
   get "students/:id/activate", to: "students#activate_student", as: "activate_student"
-  # get "students/activate_student", to: "students#activate_student_path"
 end
