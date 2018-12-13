@@ -66,6 +66,7 @@ describe 'Activate page' do
     @student.active = true
     @student.save
     visit activate_student_path(@student)
+    # byebug
     @student.reload
     expect(@student.active).to eq(false)
   end
