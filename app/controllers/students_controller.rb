@@ -1,3 +1,4 @@
+require 'pry'
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
   
@@ -11,6 +12,7 @@ class StudentsController < ApplicationController
 
   def edit
     toggle_active
+    binding.pry
   end
 
   private
