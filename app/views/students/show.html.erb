@@ -7,3 +7,7 @@
 <% end %>
 <h1><%= @student.to_s %></h1>
 <%# binding.pry %>
+
+<h1><%= @student.to_s %></h1>
+<p>This student is currently <%= @student.active ? "active" : "inactive" %>.</p>
+

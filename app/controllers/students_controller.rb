@@ -19,13 +19,19 @@ class StudentsController < ApplicationController
     redirect_to student_path(@student)
   end
 
-  # the issue was i had to tell it what path to name. thats what we did in the routes file
-  # by changin the student
+
+  def activate
+    set_student
+    @student.active = !@student.active
+    @student.save
+    redirect_to student_path(@student)
+  end
 
   private
 
     def set_student
       @student = Student.find(params[:id])
     end
+
 
 end
