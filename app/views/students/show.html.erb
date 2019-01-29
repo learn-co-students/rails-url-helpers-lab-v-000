@@ -1,1 +1,9 @@
+
+<% if !@student.active %>
+<%= "This student is currently inactive." %>
+  <%#= link_to student.to_s, activate_student_path(@student) %>
+<% else %>
+<%= "This student is currently active." %>
+<% end %>
 <h1><%= @student.to_s %></h1>
+<%# binding.pry %>
