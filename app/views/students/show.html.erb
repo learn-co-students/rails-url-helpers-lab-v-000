@@ -1,1 +1,8 @@
-<h1><%= @student.to_s %></h1>
+<% @students.each do |student| %>
+  <h1><%= link_to student.to_s, student_path(student) %></h1>
+    <% if student.active == true %>
+      <p> "This student is currently active." </p>
+    <% else %>
+      <p> "This student is currently inactive." </p>
+    <% end %>
+<% end %>
