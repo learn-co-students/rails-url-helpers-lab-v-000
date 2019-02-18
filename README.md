@@ -23,7 +23,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 * A user should be able to go to `/students/:id/activate` to toggle their `active` attribute between `true` and `false`.
 
-* Read the failing tests and modify the code until they pass. 
+* Read the failing tests and modify the code until they pass.
 
 
 ## Keep in mind
