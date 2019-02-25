@@ -11,9 +11,11 @@ class StudentsController < ApplicationController
 
   def activate
     set_student
-    @student.active
-
-
+    if @student.active
+      "This student is currently inactive."
+    else
+      "This student is currently active."
+    end
   end
 
   private
