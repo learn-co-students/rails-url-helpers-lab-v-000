@@ -1,1 +1,9 @@
+<!-- Show active status on student show page -->
 <h1><%= @student.to_s %></h1>
+
+<% if @student.active == false %>
+  <%= "This student is currently inactive." %>
+<% else %>
+  <% @student.save %>
+  <%=  "This student is currently active." %>
+<% end %>
