@@ -7,15 +7,21 @@ class StudentsController < ApplicationController
 
   def show
     set_student
+
   end
 
   def activate
+    # look for a student and then check if they are active or inactive
+    # then change their status to inactive or active
     set_student
-    if @student.active
-      "This student is currently inactive."
+    if @student.active == false
+      @student.active = true
+      @student.save
     else
-      "This student is currently active."
+      @student.active = false
+      @student.save
     end
+    redirect_to @student
   end
 
   private
