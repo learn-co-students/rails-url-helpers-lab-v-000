@@ -6,6 +6,17 @@ class StudentsController < ApplicationController
   end
 
   def show
+    set_student
+  end
+
+  def activate
+    set_student
+    if @student.active == false
+      @student.update_attribute(:active, true)
+    else
+      @student.update_attribute(:active, false)
+    end
+    redirect_to @user
   end
 
   private
