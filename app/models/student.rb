@@ -9,4 +9,5 @@ class Student < ActiveRecord::Base
   def activated?
   	!!(self.active)
   end
+
 end

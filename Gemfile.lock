@@ -121,6 +121,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rb-readline (0.5.5)
     rdoc (4.3.0)
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
@@ -188,6 +189,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails (~> 4.2)
+  rb-readline
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
