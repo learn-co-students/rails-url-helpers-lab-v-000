@@ -24,22 +24,22 @@ describe 'Show page' do
   end
 
   it 'renders properly' do
-    visit students_path(@student)
+    visit student_path(@student)
     expect(page.status_code).to eq(200)
   end
 
   it 'renders the first name in a h1 tag' do
-    visit students_path(@student)
+    visit student_path(@student)
     expect(page).to have_css("h1", text: "Daenerys")
   end
 
   it 'renders the last name in a h1 tag' do
-    visit students_path(@student)
+    visit student_path(@student)
     expect(page).to have_css("h1", text: "Targaryen")
   end
 
   it 'renders the active status if the user is inactive' do
-    visit students_path(@student)
+    visit student_path(@student)
     expect(page).to have_content("This student is currently inactive.")
   end
 
