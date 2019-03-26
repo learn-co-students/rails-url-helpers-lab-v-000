@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :students, only: [:index, :show]
 
-  patch '/students/(@student)/activate', to: 'students#activate'
+  get 'students/:id/activate', to: 'students#activate', as: 'activate_student'
+
+
 
 end
