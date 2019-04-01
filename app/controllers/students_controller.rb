@@ -5,9 +5,9 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
-  def show
-    
-  end
+  # def show
+    # Don't even need this here if there's no code in my action!!!
+  # end
 
   def activate
     @student.toggle
