@@ -1,3 +1,5 @@
+require 'pry'
+
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
 
@@ -11,10 +13,17 @@ class StudentsController < ApplicationController
 
   def activate_student
     set_student
+    if @student.active
+      @student.active = false
+    else
+      @student.active = true
+    end
+    @student.save
+    redirect_to student_path(@student)
+    # binding.pry
   end
 
-  patch '/tweets/:id' do
-  end
+
   private
 
     def set_student
