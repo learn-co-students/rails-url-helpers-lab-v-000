@@ -1,0 +1,8 @@
+<% if @student.active == true %>
+  <% @student.active = false %>
+  <% @student.save %>
+<% else %>
+  <% @student.active = true %>
+  <% @student.save %>
+<% end %>
+<%controller.redirect_to student_path(@student)  %>
