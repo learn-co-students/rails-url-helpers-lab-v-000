@@ -6,6 +6,19 @@ class StudentsController < ApplicationController
   end
 
   def show
+    set_student
+     if @student.active
+        @active_status_message = "This student is currently active."
+     else
+        @active_status_message = "This student is currently inactive."
+     end 
+  end
+
+  def activate
+    set_student
+    @student.active = !@student.active 
+    @student.save
+    redirect_to student_path(@student)
   end
 
   private
