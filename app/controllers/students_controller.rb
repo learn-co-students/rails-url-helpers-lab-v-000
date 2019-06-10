@@ -11,8 +11,8 @@ class StudentsController < ApplicationController
   end
 
   def activate
+    #activate automatically gets the path
     @student = Student.find_by(id: params[:id])
-    #
     @student.active = !@student.active
     @student.save
     #prefixs can be found using rails routes
