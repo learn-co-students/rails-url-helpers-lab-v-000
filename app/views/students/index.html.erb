@@ -1,6 +1,10 @@
 <div>
   <% @students.each do |student| %>
     <div><%= link_to student.to_s, student_path(student) %></div>
-    <!-- <%= link_to post.title, post_path(post) %> -->
+
+    <!-- <%= link_to post.title, post_path(post) %> 
+    link_to method ^             ^ Route helper: post_path(@post)
+    
+    -->
   <% end %>
 </div>
