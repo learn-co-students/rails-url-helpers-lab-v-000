@@ -1,3 +1,5 @@
+require 'pry'
+
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
 
@@ -16,7 +18,8 @@ class StudentsController < ApplicationController
     else
       @student.active = true
     end
-    redirect student_path(@student)
+    @student.save
+    redirect_to student_path(@student)
   end
 
   private
