@@ -1,2 +1,4 @@
 <h1><%= @student.to_s %></h1>
 <p><%= @student.is_active? %></p>
+
+<a href="/students/<%= @student.id %>/activate">Toggle Status</a>
