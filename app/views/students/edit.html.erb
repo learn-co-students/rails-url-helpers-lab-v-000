@@ -1,0 +1,8 @@
+<form action=<%=student_path(@student)%> method="post">
+  <input name="_method" type="hidden" value="patch" />
+  <select name="active">
+    <option value="false" <%=selected="selected" if @student.active == false%>>false</option>
+    <option value="true" <%=selected="selected" if @student.active == true%>>true</option>
+  </select><br>
+  <input type="submit" name="Submit">
+</form>

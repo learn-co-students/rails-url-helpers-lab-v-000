@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :activate, :update]
+  before_action :set_student, only: [:show, :edit, :update]
 
   def index
     @students = Student.all
@@ -8,13 +8,14 @@ class StudentsController < ApplicationController
   def show
   end
 
-  def activate
+  def edit
   end
 
   def update
-    binding.pry
+    @student.active = params[:active]
+    @student.save
+    redirect_to student_path(@student)
   end
-
 
   private
 
