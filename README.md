@@ -20,7 +20,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 - Create a new boolean attribute called `active` in the students table. (HINT: You might have to search around for the best way to set a (_ahem_) **default value** (should default to false).)
 
-- A user should be able to go to `/students/:id/activate` to toggle their `active` attribute between `true` and `false`.
+- A user should be able to go to `/students/:id/activate` to toggle their `active` attribute between `true` and `false`. (This is just the activate route, and not a actual view.)
 
 - Read the failing tests and modify the code until they pass.
 
