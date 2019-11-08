@@ -1,6 +1,6 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= link_to("#{student.to_s}", student_path(student.id))  %></div>
+    <div><%= link_to(student.to_s, student_path(student))  %></div>
   <% end %>
 </div>
 
@@ -10,4 +10,8 @@
   <div><%#= link_to "#{student.to_s}", "/students/#{student.id}"  %></div>
   <div><%#= link_to student.to_s, "/students/#{student.id}"  %></div>
 
+  (Note: With these links, I can't use link_to("student.to_s",...),
+  or else "student.to_s" shows up in the browser instead of the student's name.)
+  <div><%#= link_to("#{student.to_s}", student_path(student.id))  %></div>
+  <div><%#= link_to(student.to_s, student_path(student.id))  %></div>
 -->
