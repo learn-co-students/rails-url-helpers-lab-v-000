@@ -22,8 +22,7 @@ class StudentsController < ApplicationController
     end
     redirect_to "/students/#{@student.id}"
   end
-
-
+    
 
   private
 
