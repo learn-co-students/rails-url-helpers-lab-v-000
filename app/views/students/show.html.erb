@@ -1,1 +1,6 @@
 <h1><%= @student.to_s %></h1>
+<% if @student.active %>
+  <%= content_tag(:div, "This student is currently active.") %>
+<% else %>
+  <%= content_tag(:div, "This student is currently inactive.") %>
+<% end %>
