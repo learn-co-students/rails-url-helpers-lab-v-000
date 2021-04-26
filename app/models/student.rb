@@ -7,7 +7,7 @@ class Student < ActiveRecord::Base
     self.active == false ? "inactive" : "active"
   end
 
-  #def reverse_status
-  #  self.active == false ? self.update(active: true) : self.update(active: false)
-  #end
+  def reverse_status
+    self.active == false ? self.update(active: true) : self.update(active: false)
+  end
 end
