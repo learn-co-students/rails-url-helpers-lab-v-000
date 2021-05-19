@@ -6,6 +6,16 @@ class StudentsController < ApplicationController
   end
 
   def show
+    @student = Student.find(params[:id])
+  end
+
+  def activate
+    student = Student.find(params[:id])
+    student.active = !student.active
+    student.save
+    # yes, you can use route helpers in controllers
+    # must now use redirect_to (Sinatra allowed redirect only)
+    redirect_to student_path(student)
   end
 
   private
