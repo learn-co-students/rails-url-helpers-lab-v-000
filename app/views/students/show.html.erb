@@ -1,1 +1,4 @@
+<% if !!flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
 <h1><%= @student.to_s %></h1>
