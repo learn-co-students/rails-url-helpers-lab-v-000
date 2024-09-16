@@ -49,7 +49,7 @@ describe 'Show page' do
     visit student_path(@student)
     expect(page).to have_content("This student is currently active.")
   end
-end
+end 
 
 describe 'Activate page' do
   before do
