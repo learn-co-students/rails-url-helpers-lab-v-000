@@ -1,1 +1,8 @@
 <h1><%= @student.to_s %></h1>
+<%if @student.active == true %>
+This student is currently active.
+<%else%>
+<!-- The activate test doesn't need a page just a method-->
+This student is currently inactive.
+<%end%>
+<!-- This whole lab didn't need a form with input - Ashley-->
